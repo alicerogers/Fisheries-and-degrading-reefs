@@ -7,12 +7,12 @@ params<-set_param()
 
 #Load data on refuge availability:
 #First with branching corals
-refuges <- read.delim("data/high_coral_cover_refuges.txt", header = TRUE)
+refuges <- read.delim("high_coral_cover_refuges.txt", header = TRUE)
 #...and then without
-refuges_nb <- read.delim("data/high_coral_cover_refuges_no_branches.txt", header = TRUE)
+refuges_nb <- read.delim("high_coral_cover_refuges_no_branches.txt", header = TRUE)
 
 #Load data on invertebrate 
-inverts <- read.delim("data/Kramer_invert_data.txt", header = TRUE)
+inverts <- read.delim("Kramer_invert_data.txt", header = TRUE)
 
 #==============================
 #Initial runs and model checks
