@@ -288,7 +288,7 @@ output
 #dev.off()
 
 #Write results table to file
-write.table(output, "results/summary.txt", row.names = FALSE)
+write.table(output, "summary.txt", row.names = FALSE)
 
 
 #Unlist and re-structure size spectra data for further analyses
@@ -307,38 +307,38 @@ location_info <- unlist(location_info[-17])
 pred_data <- as.data.frame(cbind(location_info, unlist(Pred_ss_dat)))
 names(pred_data) <- c("Site", "ss_data")
 pred_data$size <- rep(size, length(site))
-write.table(pred_data, paste("results/preds.txt"))
+write.table(pred_data, paste("preds.txt"))
 
 herb_data <- as.data.frame(cbind(location_info, unlist(Herb_ss_dat)))
 names(herb_data) <- c("Site", "ss_data")
 herb_data$size <- rep(size, length(site))
-write.table(herb_data, paste("results/herbs.txt"))
+write.table(herb_data, paste("herbs.txt"))
 
 inv_data <- as.data.frame(cbind(location_info, unlist(Inv_ss_dat)))
 names(inv_data) <- c("Site", "ss_data")
 inv_data$size <- rep(size, length(site))
-write.table(inv_data, paste("results/invs.txt"))
+write.table(inv_data, paste("invs.txt"))
 
 #Growth data
 G_pred_data <- as.data.frame(cbind(location_info, unlist(Pred_growth_data)))
 names(G_pred_data) <- c("Site", "ss_data")
 G_pred_data$size <- rep(size, length(site))
-write.table(G_pred_data, paste("results/GRWTH_preds.txt"))
+write.table(G_pred_data, paste("GRWTH_preds.txt"))
 
 G_herb_data <- as.data.frame(cbind(location_info, unlist(Herb_growth_data)))
 names(G_herb_data) <- c("Site", "ss_data")
 G_herb_data$size <- rep(size, length(site))
-write.table(G_herb_data, paste("results/GRWTH_herbs.txt"))
+write.table(G_herb_data, paste("GRWTH_herbs.txt"))
 
 G_inv_data <- as.data.frame(cbind(location_info, unlist(Inv_growth_data)))
 names(G_inv_data) <- c("Site", "ss_data")
 G_inv_data$size <- rep(size, length(site))
-write.table(G_inv_data, paste("results/GRWTH_invs.txt"))
+write.table(G_inv_data, paste("GRWTH_invs.txt"))
 
 Refuge_data <- as.data.frame(cbind(location_info, unlist(Refuge_data)))
 names(Refuge_data) <- c("Site", "refs")
 Refuge_data$size <- rep(size, length(site))
-write.table(Refuge_data, paste("results/refuges.txt"))
+write.table(Refuge_data, paste("refuges.txt"))
 
 #Yield data
 #pred_yield <- as.data.frame(cbind(location_info, unlist(Pred_yield)))
